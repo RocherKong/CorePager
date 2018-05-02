@@ -1,0 +1,9 @@
+E:\WEB\CorePager\CorePager\bin\Debug\netstandard2.0\CorePager.deps.json
+E:\WEB\CorePager\CorePager\bin\Debug\netstandard2.0\CorePager.dll
+E:\WEB\CorePager\CorePager\bin\Debug\netstandard2.0\CorePager.pdb
+E:\WEB\CorePager\CorePager\obj\Debug\netstandard2.0\CorePager.csprojResolveAssemblyReference.cache
+E:\WEB\CorePager\CorePager\obj\Debug\netstandard2.0\CorePager.csproj.CoreCompileInputs.cache
+E:\WEB\CorePager\CorePager\obj\Debug\netstandard2.0\CorePager.AssemblyInfoInputs.cache
+E:\WEB\CorePager\CorePager\obj\Debug\netstandard2.0\CorePager.AssemblyInfo.cs
+E:\WEB\CorePager\CorePager\obj\Debug\netstandard2.0\CorePager.dll
+E:\WEB\CorePager\CorePager\obj\Debug\netstandard2.0\CorePager.pdb
