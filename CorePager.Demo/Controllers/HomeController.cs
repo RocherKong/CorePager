@@ -28,7 +28,7 @@ namespace CorePager.Demo.Controllers
                 new OrderModel { OrderNo="20180503001",OrderTime=DateTime.Now,OrderTotalAmount=10000},
                 new OrderModel { OrderNo="20180503001",OrderTime=DateTime.Now,OrderTotalAmount=10000},
             };
-            IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, 1, 14, 100);
+            IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, 5, 14, 100);
             return View(OrderList);
         }
 
