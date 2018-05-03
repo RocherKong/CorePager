@@ -83,13 +83,13 @@ namespace CorePager
 
         private static void AddPageItem(TagBuilder pagerTagBuilder, string template, string itemPageUrl, string itemPageText)
         {
-            string str = template.Replace(string.Format("${0}", "text"), itemPageText).Replace(string.Format("${0}", "url"), itemPageUrl);
+            string str = template.Replace(string.Format("${0}", Constants.PAGE_TEXT_KEY), itemPageText).Replace(string.Format("${0}", Constants.ITEM_URL_KEY), itemPageUrl);
             pagerTagBuilder.InnerHtml.AppendHtml(str);
         }
 
         private static void AddPageItem(TagBuilder pagerTagBuilder, string template, string itemPageUrl, int itemPageIndex)
         {
-            string str = template.Replace(string.Format("${0}", "index"), ((int)itemPageIndex).ToString()).Replace(string.Format("${0}", "url"), itemPageUrl);
+            string str = template.Replace(string.Format("${0}", Constants.ITEM_INDEX_KEY), ((int)itemPageIndex).ToString()).Replace(string.Format("${0}", Constants.ITEM_URL_KEY), itemPageUrl);
             pagerTagBuilder.InnerHtml.AppendHtml(str);
         }
 
