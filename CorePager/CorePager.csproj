@@ -1,16 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Rocher</Authors>
     <Company>Rocher</Company>
+    <Version>1.1.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.TagHelpers" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.0.3" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor" Version="2.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Runtime" Version="2.0.2" />
   </ItemGroup>
 
 </Project>

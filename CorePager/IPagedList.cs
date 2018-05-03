@@ -9,7 +9,7 @@ namespace CorePager
     {
         int CurrentPageIndex { get; set; }
 
-        int MaxPageIndex { get; set; }
+        int MaxPageIndex { get; }
 
         int PageSize { get; set; }
 

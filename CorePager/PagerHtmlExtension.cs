@@ -4,13 +4,6 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Mvc.Routing;
 using System;
 using System.Collections.Generic;
-using System.Text;
-using Microsoft.AspNetCore.Razor;
-using Microsoft.AspNetCore.Razor.Runtime;
-using Microsoft.Extensions.Primitives;
-using Microsoft.AspNetCore.Http.Abstractions;
-using Microsoft.AspNetCore.Http.Features;
-using Microsoft.AspNetCore.Mvc.Core;
 
 namespace CorePager
 {
@@ -76,7 +69,7 @@ namespace CorePager
                 if (next < pagedList.MaxPageIndex)
                 {
                     dictionary[pagerOptions.PageIndexParameterName] = next;
-                    AddPageItem(tagBuilder, Constants.DEFAULT_ITEM_TEMPLATE, urlHelper.Link(pagerOptions.RouteName, dictionary), pagerOptions.NextText);
+                    AddPageItem(tagBuilder, Constants.DEFAULT_PAGE_TEXT_TEMPLATE, urlHelper.Link(pagerOptions.RouteName, dictionary), pagerOptions.NextText);
                 }
                 if (pagedList.CurrentPageIndex < pagedList.MaxPageIndex)
                 {
