@@ -15,4 +15,8 @@ namespace CorePager
 
         long TotalItemCount { get; set; }
     }
+
+    public interface IPagedList<T> : IEnumerable<T>, IEnumerable, IPagedList
+    {
+    }
 }
