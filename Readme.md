@@ -13,7 +13,7 @@
 #### 1.Fetch Data in controller and Convert To PagedList
 ``` c#
 - PagedList ctor:public PagedList(IEnumerable<T> ToPageItemList, int pageIndex, int pageSize, long totalItemCount)
-IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, 5, 14, 100);
+IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, 5, 10, 100);
 return View(OrderList);
 ```
 #### 2.Add Namespace for view in _ViewImports.cshtml
@@ -26,11 +26,14 @@ return View(OrderList);
 ```
 
 #### 4.Use CorePager in the page.
-``` c#
-@Html.Pager(Model, new PagerOptions
-{
-    CssClass = "pagination pull-right",
-    Id = "pager",
-    NoPageHide = false
-})
+``` html
+<div class="clearfix">
+    <p class="pull-left" style="margin:20px 10px 0;">当前页：<strong>@Model.CurrentPageIndex</strong> /总计：<strong>@Model.TotalItemCount</strong>  条记录</p>
+    @Html.Pager(Model, new PagerOptions
+    {
+        CssClass = "pagination pull-right",
+
+        NoPageHide = true
+    })
+</div>
 ```

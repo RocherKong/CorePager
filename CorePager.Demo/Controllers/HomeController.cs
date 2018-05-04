@@ -10,7 +10,7 @@ namespace CorePager.Demo.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Index(int PageIndex, int PageSize=10)
         {
             IEnumerable<OrderModel> list = new List<OrderModel> {
                 new OrderModel { OrderNo="20180503001",OrderTime=DateTime.Now,OrderTotalAmount=10000},
@@ -28,7 +28,7 @@ namespace CorePager.Demo.Controllers
                 new OrderModel { OrderNo="20180503001",OrderTime=DateTime.Now,OrderTotalAmount=10000},
                 new OrderModel { OrderNo="20180503001",OrderTime=DateTime.Now,OrderTotalAmount=10000},
             };
-            IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, 5, 14, 100);
+            IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, PageIndex, PageSize, 100);
             return View(OrderList);
         }
 
