@@ -8,24 +8,40 @@
                                            |___/             
 ```
 
-## CorePager is a pager for .Net core Mvc.You can use it in core 2.0 website.
+## CorePager is a simple and easy-use pager for .Net Razor view.You can use it in any .Net Website that Written in .net framework4.6.2 or .net core.
 ### How To Use
-#### 1.Fetch Data in controller and Convert To PagedList
+#### 0x01.Nuget Install
+``` powershell
+Install-Package CorePager
+```
+#### 0x02.Fetch Data in controller and Convert To PagedList
 ``` c#
 - PagedList ctor:public PagedList(IEnumerable<T> ToPageItemList, int pageIndex, int pageSize, long totalItemCount)
 IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, 5, 10, 100);
 return View(OrderList);
 ```
-#### 2.Add Namespace for view in _ViewImports.cshtml
+#### 0x03.Add Namespace for view in _ViewImports.cshtml or View web.config
 ``` c#
 @using CorePager
 ```
-#### 3.Add view Model Type in the top of index.cshtml
+Or
+``` xml
+<system.web.webPages.razor>
+    <pages pageBaseType="System.Web.Mvc.WebViewPage">
+      <namespaces>
+        ...
+        <add namespace="CorePager" />
+      </namespaces>
+    </pages>
+  </system.web.webPages.razor>
+```
+
+#### 0x04.Add view Model Type in the top of index.cshtml
 ``` c#
 @model IPagedList<OrderModel>
 ```
 
-#### 4.Use CorePager in the page.
+#### 0x05.Use CorePager in your page.
 ``` html
 <div class="clearfix">
     <p class="pull-left" style="margin:20px 10px 0;">当前页：<strong>@Model.CurrentPageIndex</strong> /总计：<strong>@Model.TotalItemCount</strong>  条记录</p>
