@@ -17,7 +17,9 @@ Install-Package CorePager
 #### 0x02.Fetch Data in controller and Convert To PagedList
 ``` c#
 - PagedList ctor:public PagedList(IEnumerable<T> ToPageItemList, int pageIndex, int pageSize, long totalItemCount)
-IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, 5, 10, 100);
+IPagedList<OrderModel> OrderList = new PagedList<OrderModel>(list, 5, 10, 100); 
+//Or you can use for simple convert to PagedList
+IPagedList<OrderModel> OrderList = list.ToPagedList<OrderModel>(5, 10, 100);
 return View(OrderList);
 ```
 #### 0x03.Add Namespace for view in _ViewImports.cshtml or View web.config
