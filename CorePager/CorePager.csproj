@@ -5,12 +5,13 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Rocher</Authors>
     <Company>Rocher</Company>
-    <Version>1.3.2</Version>
-    <AssemblyVersion>1.3.2.0</AssemblyVersion>
-    <FileVersion>1.3.2.0</FileVersion>
+    <Version>1.3.3</Version>
+    <AssemblyVersion>1.3.3.0</AssemblyVersion>
+    <FileVersion>1.3.3.0</FileVersion>
     <PackageProjectUrl>https://github.com/RocherKong/CorePager</PackageProjectUrl>
     <Description>CorePager is a simple and easy-use pager for .Net Razor view.You can use it in any .Net Website that written based .net framework4.6.2 or .net core.</Description>
     <PackageReleaseNotes>Make More Simple.</PackageReleaseNotes>
+    <PackageTags>pager,mvcpager,corepager,webdiyer,webpager,net core pager</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
